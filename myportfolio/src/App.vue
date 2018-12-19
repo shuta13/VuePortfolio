@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <radial-menu
+      style="margin: auto; margin-top: 300px; background-color: white"
+      :itemSize="70"
+      :radius="170"
+      :angle-restriction="175">
+        <radial-menu-item 
+          v-for="(item, index) in items" 
+          :key="index" 
+          style="background-color: white" 
+          @click="() => handleClick(item)">
+          <span>{{item}}</span>
+        </radial-menu-item>
+      </radial-menu>
+      <div style="color: rgba(0,0,0,0.6); margin-top: 16px;">{{ lastClicked }}</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { RadialMenu,  RadialMenuItem } from 'vue-radial-menu'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    RadialMenu,
+    RadialMenuItem
+  },
+  data () {
+    return {
+      items: ['painting', 'movie', 'music', 'shader', 'application', 'others'],
+      lastClicked: 'click on something!'
+    }
+  },
+  methods: {
+    handleClick (item) {
+      this.lastClicked = item;
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
