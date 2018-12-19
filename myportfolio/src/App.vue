@@ -8,7 +8,7 @@
         <radial-menu-item 
           v-for="(item, index) in items" 
           :key="index" 
-          style="background-color: white, fontSize: 20"
+          style="background-color: white"
           @click="() => handleClick(item)">
           <span>{{item}}</span>
         </radial-menu-item>
@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      items: ['about', 'movie', 'product', 'paint', 'music', 'others'],
+      items: ['about', 'app', 'graphics', 'paint', 'music', 'others'],
       lastClicked: 'click on something!'
     }
   },
