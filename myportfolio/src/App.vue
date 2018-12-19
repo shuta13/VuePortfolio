@@ -2,18 +2,18 @@
   <div id="app">
     <radial-menu
       style="margin: auto; margin-top: 300px; background-color: white"
-      :itemSize="70"
-      :radius="170"
-      :angle-restriction="175">
+      :itemSize="50"
+      :radius="150"
+      :angle-restriction="180">
         <radial-menu-item 
           v-for="(item, index) in items" 
           :key="index" 
-          style="background-color: white" 
+          style="background-color: white, fontSize: 20"
           @click="() => handleClick(item)">
           <span>{{item}}</span>
         </radial-menu-item>
       </radial-menu>
-      <div style="color: rgba(0,0,0,0.6); margin-top: 16px;">{{ lastClicked }}</div>
+      <div style="color: rgba(0,0,0,0.6); margin-top: 16px; text-align: center;">{{ lastClicked }}</div>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      items: ['painting', 'movie', 'music', 'shader', 'application', 'others'],
+      items: ['about', 'movie', 'product', 'paint', 'music', 'others'],
       lastClicked: 'click on something!'
     }
   },
