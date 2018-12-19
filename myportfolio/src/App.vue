@@ -1,19 +1,21 @@
-<template>
-  <div id="app">
+<template style="background-color: #80C0C0;">
+  <div id="app" style="color: #80C0C0;">
     <radial-menu
       style="margin: auto; margin-top: 300px; background-color: white"
-      :itemSize="50"
-      :radius="150"
+      :itemSize="55"
+      :radius="160"
       :angle-restriction="180">
         <radial-menu-item 
           v-for="(item, index) in items" 
           :key="index" 
-          style="background-color: white"
+          style="background-color: white; font-family: 'Thasadith'; 
+          font-size: 18px;"
           @click="() => handleClick(item)">
-          <span>{{item}}</span>
+          <span style="color: rgba(0,0,0,0.6);">{{item}}</span>
         </radial-menu-item>
       </radial-menu>
-      <div style="color: rgba(0,0,0,0.6); margin-top: 16px; text-align: center;">{{ lastClicked }}</div>
+      <div style="color: rgba(0,0,0,1); margin-top: 16px; text-align: center; 
+        font-family: 'Thasadith'; font-size: 25px;">{{ lastClicked }}</div>
   </div>
 </template>
 
