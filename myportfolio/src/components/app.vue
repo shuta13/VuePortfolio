@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>ここはページ２です。</p>
+    <p>ここはページ２</p>
     <router-link to="/">← back</router-link>
   </div>
 </template>
