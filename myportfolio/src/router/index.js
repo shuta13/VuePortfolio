@@ -1,28 +1,24 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
-import App from '../App'
+import home from '@/components/home';
 import about from '@/components/about'
 import app from '@/components/app'
 
-Vue.use(Router)
-
-export default new Router({
+const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'App',
-      component: App
+      component: home
     },
     {
       path: '/about',
-      name: 'about',
       component: about
     },
     {
       path: '/app',
-      name: 'app',
       component: app
     }
   ]
 })
+
+export default router;
