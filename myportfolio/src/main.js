@@ -1,7 +1,8 @@
 import Vue from 'vue'
-import VirtualCollection from 'vue-virtual-collection'
-import App from './App.vue'
 import VueRouter from 'vue-router'
+import VirtualCollection from 'vue-virtual-collection'
+
+import App from './App.vue'
 
 import './assets/sass/style.scss'
 

@@ -1,9 +1,9 @@
-<template style="background-color: #80C0C0;">
+<template>
   <div id="app" style="color: #80C0C0;">
     <radial-menu
       style="margin: auto; margin-top: 300px; background-color: white"
       :itemSize="55"
-      :radius="160"
+      :radius="145"
       :angle-restriction="180">
         <radial-menu-item 
           v-for="(item, index) in items" 
@@ -31,7 +31,10 @@ export default {
   data () {
     return {
       items: ['about', 'app', 'graphics', 'paint', 'music', 'others'],
-      lastClicked: 'click on something!'
+      lastClicked: 'click!',
+
+      customizedClass: 'hoge'
+    
     }
   },
   methods: {
