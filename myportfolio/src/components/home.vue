@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     handleClick (item) {
+      this.$router.push({ path: item });
       this.lastClicked = item;
     }
   }
