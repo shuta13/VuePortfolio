@@ -1,9 +1,7 @@
 <template>
   <div>
-    <p>
-      ‚±‚±‚Íƒy[ƒW‚P‚Å‚·B
-    </p>
-    <router-link to="/">© back</router-link>
+    <p>ã“ã“ã¯ãƒšãƒ¼ã‚¸1ã§ã™</p>
+    <router-link to="/">â† back</router-link>
   </div>
 </template>
 
