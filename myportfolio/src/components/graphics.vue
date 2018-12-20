@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>ここはgraphicsページ</p>
-    <router-link to="/">← back</router-link>
+    <p>graphics</p>
+    <router-link to="/">�? back</router-link>
   </div>
 </template>
